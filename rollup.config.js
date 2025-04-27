@@ -1,5 +1,6 @@
 import { terser } from 'rollup-plugin-terser';
 import resolve from '@rollup/plugin-node-resolve';
+import json from '@rollup/plugin-json';
 
 export default {
   input: 'src/index.js',
@@ -22,5 +23,5 @@ export default {
       sourcemap: true,
     },
   ],
-  plugins: [resolve()],
+  plugins: [json(), resolve()],
 };
