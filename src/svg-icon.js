@@ -21,7 +21,7 @@ class SvgIcon extends HTMLElement {
   render() {
     const icon = this.getAttribute('icon');
     const size = this.getAttribute('size') || 24;
-    const color = this.getAttribute('color') || 'currentColor';
+    const color = this.getAttribute('color') || 'black';
     const viewBox = this.getAttribute('viewBox') || '0 0 24 24';
 
     const path = iconPaths[icon];

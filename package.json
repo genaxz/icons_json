@@ -1,11 +1,33 @@
 {
   "name": "svg-icon-library",
-  "version": "1.0.0",
-  "description": "Framework-agnostic SVG icon library using Web Components",
+  "version": "1.0.1",
+  "description": "Framework-agnostic SVG icon library using Web Components with framework wrappers",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./react": {
+      "import": "./dist/frameworks/react/index.esm.js",
+      "require": "./dist/frameworks/react/index.js",
+      "types": "./dist/frameworks/react/index.d.ts"
+    },
+    "./vue": {
+      "import": "./dist/frameworks/vue/index.esm.js",
+      "require": "./dist/frameworks/vue/index.js",
+      "types": "./dist/frameworks/vue/index.d.ts"
+    },
+    "./angular": {
+      "import": "./dist/frameworks/angular/index.esm.js",
+      "require": "./dist/frameworks/angular/index.js",
+      "types": "./dist/frameworks/angular/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
@@ -18,17 +40,43 @@
     "svg",
     "icons",
     "web-components",
-    "framework-agnostic"
+    "framework-agnostic",
+    "react",
+    "vue",
+    "angular"
   ],
-  "author": "Sri",
+  "author": "Your Name",
   "license": "MIT",
   "devDependencies": {
+    "@angular/core": "^17.1.0",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/react": "^18.2.55",
+    "@vue/compiler-sfc": "^3.4.15",
+    "vue-tsc": "^2.0.1",
+    "react": "^18.2.0",
     "rollup": "^4.9.6",
-    "rollup-plugin-terser": "^7.0.2",
-    "typescript": "^5.3.3"
+    "rollup-plugin-vue": "^6.0.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.3",
+    "vue": "^3.4.15"
   },
-  "dependencies": {
-    "@rollup/plugin-json": "^6.1.0"
+  "peerDependencies": {
+    "@angular/core": ">=14.0.0",
+    "react": ">=16.8.0",
+    "vue": ">=3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@angular/core": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
   }
 }
