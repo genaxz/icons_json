@@ -1,6 +1,6 @@
 {
   "name": "svg-icon-library",
-  "version": "1.0.41",
+  "version": "1.0.42",
   "description": "Framework-agnostic SVG icon library using Web Components with framework wrappers",
   "type": "module",
   "main": "dist/index.js",
@@ -16,21 +16,10 @@
       "import": "./dist/frameworks/react/index.esm.js",
       "require": "./dist/frameworks/react/index.js",
       "types": "./dist/frameworks/react/index.d.ts"
-    },
-    "./vue": {
-      "import": "./dist/frameworks/vue/index.esm.js",
-      "require": "./dist/frameworks/vue/index.js",
-      "types": "./dist/frameworks/vue/index.d.ts"
-    },
-    "./angular": {
-      "import": "./dist/frameworks/angular/index.esm.js",
-      "require": "./dist/frameworks/angular/index.js",
-      "types": "./dist/frameworks/angular/index.d.ts"
     }
   },
   "files": [
-    "dist",
-    "src/**/*.d.ts"
+    "dist"
   ],
   "typesVersions": {
     "*": {
@@ -75,18 +64,10 @@
     "vue-tsc": "^2.0.1"
   },
   "peerDependencies": {
-    "@angular/core": ">=14.0.0",
-    "react": ">=16.8.0",
-    "vue": ">=3.0.0"
+    "react": ">=16.8.0"
   },
   "peerDependenciesMeta": {
-    "@angular/core": {
-      "optional": true
-    },
     "react": {
-      "optional": true
-    },
-    "vue": {
       "optional": true
     }
   }

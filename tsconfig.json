@@ -24,7 +24,7 @@
     "src/**/*.d.ts",
     "src/**/*.json",
     "src/**/*.vue",
-    "vue-shims.d.ts",
+    "types.d.ts",
     "src/frameworks/react/custom-elements.d.ts"
   ],
   "exclude": ["node_modules", "dist"]
