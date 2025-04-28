@@ -1,6 +1,6 @@
 {
   "name": "svg-icon-library",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Framework-agnostic SVG icon library using Web Components with framework wrappers",
   "type": "module",
   "main": "dist/index.js",
@@ -29,8 +29,19 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "src/**/*.d.ts"
   ],
+  "typesVersions": {
+    "*": {
+      "*": [
+        "dist/index.d.ts"
+      ],
+      "react": [
+        "dist/frameworks/react/index.d.ts"
+      ]
+    }
+  },
   "scripts": {
     "build": "rollup -c",
     "dev": "rollup -c -w",

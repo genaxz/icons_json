@@ -24,7 +24,7 @@
     "src/**/*.json",
     "src/**/*.vue",
     "vue-shims.d.ts",
-    "types/**/*",
+    "svg-icon-library-react.d.ts",
     "src/frameworks/react/custom-elements.d.ts"
   ],
   "exclude": ["node_modules", "dist"]
