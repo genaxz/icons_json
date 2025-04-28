@@ -18,13 +18,13 @@
     "forceConsistentCasingInFileNames": true
   },
   "include": [
+    "src/**/*",
     "src/**/*.js",
     "src/**/*.ts",
     "src/**/*.d.ts",
     "src/**/*.json",
     "src/**/*.vue",
     "vue-shims.d.ts",
-    "svg-icon-library-react.d.ts",
     "src/frameworks/react/custom-elements.d.ts"
   ],
   "exclude": ["node_modules", "dist"]
