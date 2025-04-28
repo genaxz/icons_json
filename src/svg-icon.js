@@ -19,7 +19,7 @@ class SvgIcon extends HTMLElement {
   }
 
   render() {
-    const icon = this.getAttribute('icon');
+    const icon = this.getAttribute('icon') || ''; // Default icon if none is provided
     const size = this.getAttribute('size') || 24;
     const color = this.getAttribute('color') || 'black';
     const viewBox = this.getAttribute('viewBox') || '0 0 24 24';
@@ -28,21 +28,25 @@ class SvgIcon extends HTMLElement {
 
     if (!path) {
       console.warn(`Icon "${icon}" not found in iconPaths`);
-      this.shadowRoot.innerHTML = '';
+      if (this.shadowRoot) {
+        this.shadowRoot.innerHTML = '';
+      }
       return;
     }
 
-    this.shadowRoot.innerHTML = `
-      <svg 
-        xmlns="http://www.w3.org/2000/svg"
-        width="${size}"
-        height="${size}"
-        viewBox="${viewBox}"
-        fill="${color}"
-      >
-        <path d="${path}"></path>
-      </svg>
-    `;
+    if (this.shadowRoot) {
+      this.shadowRoot.innerHTML = `
+        <svg 
+          xmlns="http://www.w3.org/2000/svg"
+          width="${size}"
+          height="${size}"
+          viewBox="${viewBox}"
+          fill="${color}"
+        >
+          <path d="${path}"></path>
+        </svg>
+      `;
+    }
   }
 }
 

@@ -11,8 +11,8 @@ const iconPaths = {
   ...media,
 };
 
-// Export the combined icon paths
+// Export the combined icon paths as default
 export default iconPaths;
 
-// Also export individual categories for more granular imports
+// Also export individual categories as named exports
 export { ui, arrows, devices, media };

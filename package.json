@@ -1,6 +1,6 @@
 {
   "name": "svg-icon-library",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Framework-agnostic SVG icon library using Web Components with framework wrappers",
   "type": "module",
   "main": "dist/index.js",
